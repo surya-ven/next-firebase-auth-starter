@@ -27,11 +27,13 @@ Firebase.
 3. Configure .firebaserc and firebase.json files
 
 For development:
+
 4. Configure the firebase emulator suite using this guide: https://firebase.google.com/docs/emulator-suite
 5. Follow these steps to setup a debug environment for AppCheck on the web: https://firebase.google.com/docs/app-check/web/debug-provider 
 6. Run ```npm run dev```
 
 For production:
+
 4. Remove or comment out the "connectAuthEmulator" function call in app/config/firebase.ts
 5. Run ```npm run build && npm run start```
 
