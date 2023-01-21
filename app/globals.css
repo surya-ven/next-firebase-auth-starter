@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	/* Categories Tab */
+	.ctabs {
+		@apply flex overflow-x-auto items-center;
+
+		/* custom */
+		&::-webkit-scrollbar {
+			@apply hidden;
+		}
+	}
+
+	.ctab {
+		@apply cursor-pointer items-center justify-center text-center;
+		@apply h-10 min-w-fit text-base leading-loose;
+		--tab-padding: 1rem;
+
+		/* styled */
+		@apply text-opacity-50 hover:text-opacity-100;
+		--tab-color: hsla(var(--bc) / var(--tw-text-opacity, 1));
+		--tab-bg: hsla(var(--b1) / var(--tw-bg-opacity, 1));
+		--tab-border-color: hsla(var(--b3) / var(--tw-bg-opacity, 1));
+		color: var(--tab-color);
+		padding-left: var(--tab-padding, 1rem);
+		padding-right: var(--tab-padding, 1rem);
+		&.ctab-active {
+			@apply border-base-content border-opacity-100 text-opacity-100;
+		}
+		&:focus {
+			@apply outline-none;
+		}
+		&:focus-visible {
+			outline: 2px solid currentColor;
+			outline-offset: -3px;
+		}
+	}
+	.ctab-bordered {
+		@apply border-base-content border-opacity-20;
+		border-style: solid;
+		border-bottom-width: calc(var(--tab-border, 1px) + 1px);
+	}
+
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* For IE, Edge and Firefox */
+	.scrollbar-hide {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
