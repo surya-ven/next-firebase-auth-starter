@@ -4,7 +4,8 @@ Authentication is hard.
 
 Are you a builder/founder who just wants to get your startup off the ground with a reasonable amount of "future-proofed" authentication enabled? Don't do it yourself (unless you're a security startup!).
 
-After spending weeks researching authentication services, I found there was only one service that sufficiently met the two criteria I was optimising for:
+After spending weeks researching authentication services, I found there was only one service that sufficiently met the three criteria I was optimising for:
+- Security
 - Price
 - Usability/learning curve
 
