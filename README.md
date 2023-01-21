@@ -21,7 +21,7 @@ Firebase.
 ## Setup
 
 
-1. Clone this repository ```git clone https://github.com/surya-ven/next-firebase-auth-starter.git && cd next-firebase-auth-start```
+1. Clone this repository ```git clone https://github.com/surya-ven/next-firebase-auth-starter.git && cd next-firebase-auth-starter```
 2. Add in your Firebase API Keys to  app/firebase.config.ts
 3. Configure .firebaserc and firebase.json files
 
