@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 13 AppDir Firebase Auth Starter
 
-## Getting Started
+Authentication is hard. 
 
-First, run the development server:
+Are you a builder/founder who just wants to get your startup off the ground with a reasonable amount of "future-proofed" authentication enabled? Don't do it yourself (unless you're a security startup!).
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+After spending weeks researching authentication services, I found there was only one service that sufficiently met the two criteria I was optimising for:
+- Price
+- Usability/learning curve
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Firebase.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Uses Next.js 13 AppDir (experimental)
+- Includes the core Firebase, Auth, and AppCheck providers
+- Includes an (optional) AuthChildProvider which provides an additional layer of abstraction for the Auth provider. It also includes helper functions for checking logging in, logging out, google log in with redirect, and restting password. Handles redirects automatically based on auth state.
+- A TailwindUI Login and Registration form example with a mock dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Setup
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone this repository ```git clone https://github.com/surya-ven/next-firebase-auth-starter.git && cd next-firebase-auth-start```
+2. Add in your Firebase API Keys to  app/firebase.config.ts
+3. Configure .firebaserc and firebase.json files
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For development:
+4. Configure the firebase emulator suite using this guide: https://firebase.google.com/docs/emulator-suite
+5. Follow these steps to setup a debug environment for AppCheck on the web: https://firebase.google.com/docs/app-check/web/debug-provider 
+6. Run ```npm run dev```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For production:
+4. Remove or comment out the "connectAuthEmulator" function call in app/config/firebase.ts
+5. Run ```npm run build && npm run start```
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
