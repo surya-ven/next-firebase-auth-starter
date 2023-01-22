@@ -7,7 +7,7 @@
  *
  */
 
-"use client";includes 
+"use client";
 
 import { useContext, createContext, useState, useEffect } from "react";
 import { googleProvider } from "../config/firebase";
